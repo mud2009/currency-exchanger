@@ -6,12 +6,14 @@ import Exchange from './js/service';
 
 function clearForms() {
   $("#dollars").val("");
-  $("#currency").val("");
+  $("#currency1").val("");
+  $("#currency2").val("");
 }
 
 function getElements(response, dollars, currency2) {
   if (response.result) {
-    let outCalc = dollars * response.conversion_rate;
+    let outCalc = Math.floor((dollars * response.conversion_rate)*100)/100;
+    $('#exchange-out').text("");
     $('#exchange-out').prepend(`${outCalc} ${currency2}`);
   } else {
     $('.showErrors').text(`There was an error: ${response}`);
