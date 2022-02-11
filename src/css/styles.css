@@ -1,3 +1,16 @@
-.display-4{
+.container {
   text-align: center;
+}
+
+.jumbotron{
+  height: 100vh;
+}
+
+input{
+  width: 100px;
+  line-height: .5em;
+}
+
+select{
+  width: 5em;
 }
