@@ -25,7 +25,7 @@ async function makeApiCall(dollars, currency) {
   getElements(response, dollars, currency);
 }
 
-$('form').submit(function(event){
+$('form').on("submit", function(event){
   event.preventDefault();
   let dollars = $("#dollars").val();
   let currency = $("#currency").val();
