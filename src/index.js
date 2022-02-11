@@ -9,10 +9,18 @@ function clearForms() {
   $("#currency").val("");
 }
 
-async function makeApiCall(){
+function getElements(response) {
+  if (response.result) {
+    $('#exchange-out').prepend(`${response.conversion_rates.EUR}`);
+  } else {
+    $('.showErrors').text(`There was an error: ${response}`);
+  }
+}
+
+async function makeApiCall() {
   const response = await Exchange.getExchange();
   console.log(response);
-  // getElements(response);
+  getElements(response);
 }
 
 $(document).ready(function(){
@@ -21,8 +29,6 @@ $(document).ready(function(){
     let dollars = $("#dollars").val();
     let currency = $("#currency").val();
     clearForms();
-    console.log(dollars);
-    console.log(currency);
     makeApiCall(dollars, currency);
     $('#userInput').hide();
     $('#output').show();
