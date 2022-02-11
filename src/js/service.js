@@ -17,5 +17,3 @@ export default class Exchange {
     }
   }
 }
-// ${process.env.API_KEY}
-// response.status
