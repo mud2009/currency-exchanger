@@ -6,6 +6,9 @@
   height: 100vh;
 }
 
+.lead{
+  padding-top: 1em;
+}
 input{
   width: 100px;
   line-height: .5em;
