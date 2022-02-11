@@ -12,6 +12,7 @@
 input{
   width: 100px;
   line-height: .5em;
+  text-align: right;
 }
 
 select{
