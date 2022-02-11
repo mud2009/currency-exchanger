@@ -14,6 +14,7 @@ function getElements(response) {
     $('#exchange-out').prepend(`${response.conversion_rates.EUR}`);
   } else {
     $('.showErrors').text(`There was an error: ${response}`);
+    console.log(response);
   }
 }
 
