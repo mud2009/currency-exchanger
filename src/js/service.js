@@ -3,7 +3,11 @@ export default class Exchange {
     try{
       const response = await fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`);
       if (!response.ok) {
-        throw Error('Invalid API key entry');
+        if (response.status === 404) {
+          throw Error('Invalid entry, not found');
+        } else if (response.status === 403) {
+          throw Error('Invalid API Key');
+        }
       }
       return response.json();
     }
