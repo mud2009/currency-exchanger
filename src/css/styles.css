@@ -1,9 +1,9 @@
-.container {
-  text-align: center;
+body{
+  background-color: #e9ecef;
 }
 
-.jumbotron{
-  height: 100vh;
+.container {
+  text-align: center;
 }
 
 .lead{
