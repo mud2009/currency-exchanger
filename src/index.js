@@ -2,11 +2,17 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css'; 
-// import Exchange from './js/service.js';
+import Exchange from './js/service';
 
 function clearForms() {
   $("#dollars").val("");
   $("#currency").val("");
+}
+
+async function makeApiCall(){
+  const response = await Exchange.getExchange();
+  console.log(response);
+  // getElements(response);
 }
 
 $(document).ready(function(){
@@ -17,6 +23,7 @@ $(document).ready(function(){
     clearForms();
     console.log(dollars);
     console.log(currency);
+    makeApiCall(dollars, currency);
     $('#userInput').hide();
     $('#output').show();
   });
