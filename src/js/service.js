@@ -1,7 +1,7 @@
 export default class Exchange {
-  static async getExchange() {
+  static async getExchange(currency1, currency2) {
     try{
-      const response = await fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`);
+      const response = await fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/${currency1}/${currency2}`);
       if (!response.ok) {
         if (response.status === 404) {
           throw Error('Invalid entry, not found');
