@@ -15,13 +15,11 @@ function getElements(response, dollars, currency) {
     $('#exchange-out').prepend(`${outCalc} ${currency}`);
   } else {
     $('.showErrors').text(`There was an error: ${response}`);
-    console.log(response);
   }
 }
 
 async function makeApiCall(dollars, currency) {
   const response = await Exchange.getExchange();
-  console.log(response);
   getElements(response, dollars, currency);
 }
 
