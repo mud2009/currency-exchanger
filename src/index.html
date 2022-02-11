@@ -11,9 +11,9 @@
       <div id="userInput">
         <form>
           <p>Exchange 
-            <input id="dollars" type="text" required> USD to 
-            <select name="currency" id="currency" required>
-              <option value=""></option>
+            <input id="dollars" type="text" placeholder="Input $, €, ₩..." required>
+            <select name="currency1" id="currency1" required>
+              <option value="">Select Currency...</option>
               <option value="AZN">Azerbaijan Manat (₼)</option>
               <option value="CNY">Chinese Yuan Renminbi (¥)</option>
               <option value="ETB">Ethopian Birr (ብር)</option>
@@ -22,6 +22,20 @@
               <option value="INR">Indian Rupee (₹)</option>
               <option value="RUB">Russian Ruble (₽)</option>
               <option value="KRW">South Korean Won (₩)</option>
+              <option value="USD">United States Dollar ($)</option>
+            </select>
+            to
+            <select name="currency2" id="currency2" required>
+              <option value="">Select Currency...</option>
+              <option value="AZN">Azerbaijan Manat (₼)</option>
+              <option value="CNY">Chinese Yuan Renminbi (¥)</option>
+              <option value="ETB">Ethopian Birr (ብር)</option>
+              <option value="EUR">E.U. Euro (€)</option>
+              <option value="GEL">Georgian Lari (₾)</option>
+              <option value="INR">Indian Rupee (₹)</option>
+              <option value="RUB">Russian Ruble (₽)</option>
+              <option value="KRW">South Korean Won (₩)</option>
+              <option value="USD">United States Dollar ($)</option>
             </select>
           </p>
           <button type="submit" id="exchange" class="btn btn-primary">Exchange</button>
