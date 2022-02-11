@@ -9,7 +9,7 @@ function clearForms() {
   $("#currency").val("");
 }
 
-function getElements(response, dollars, currency1, currency2) {
+function getElements(response, dollars) {
   if (response.result) {
     let outCalc = dollars * response.conversion_rates[`${currency}`];
     $('#exchange-out').prepend(`${outCalc} ${currency}`);
@@ -19,8 +19,8 @@ function getElements(response, dollars, currency1, currency2) {
 }
 
 async function makeApiCall(dollars, currency1, currency2) {
-  const response = await Exchange.getExchange();
-  getElements(response, dollars, currency1, currency2);
+  const response = await Exchange.getExchange(currency1, currency2);
+  getElements(response, dollars);
 }
 
 $('form').on("submit", function(event){
