@@ -8,21 +8,24 @@
       <div class="container">
       <div class="display-4">Currency Exchanger</div>
       <p class="lead">Find exchange rates with base currency USD:</p>
-      <p>Exchange 
-        <input id="dollars" type="text"> USD to 
-        <select name="currency" id="currency">
-          <option value=""></option>
-          <option value="AZN">Azerbaijan Manat (₼)</option>
-          <option value="CNY">Chinese Yuan Renminbi (¥)</option>
-          <option value="ETB">Ethopian Birr (ብር)</option>
-          <option value="EUR">E.U. Euro (€)</option>
-          <option value="GEL">Georgian Lari (₾)</option>
-          <option value="INR">Indian Rupee (₹)</option>
-          <option value="RUB">Russian Ruble (₽)</option>
-          <option value="KRW">South Korean Won (₩)</option>
-        </select>
-      </p>
-      <button id="exchange" class="btn btn-primary">Exchange</button>
+      <div id="userInput">
+        <p>Exchange 
+          <input id="dollars" type="text"> USD to 
+          <select name="currency" id="currency">
+            <option value=""></option>
+            <option value="AZN">Azerbaijan Manat (₼)</option>
+            <option value="CNY">Chinese Yuan Renminbi (¥)</option>
+            <option value="ETB">Ethopian Birr (ብር)</option>
+            <option value="EUR">E.U. Euro (€)</option>
+            <option value="GEL">Georgian Lari (₾)</option>
+            <option value="INR">Indian Rupee (₹)</option>
+            <option value="RUB">Russian Ruble (₽)</option>
+            <option value="KRW">South Korean Won (₩)</option>
+          </select>
+        </p>
+        <button id="exchange" class="btn btn-primary">Exchange</button>
+      </div>
+      <div class="output"></div>
     </div>
   </div>
 </body>
