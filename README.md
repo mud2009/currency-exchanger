@@ -1,6 +1,6 @@
-# (Application Name)
+# Currency Exchanger
 
-#### (Brief Description of Application)
+#### Online currency exchanger
 
 #### By Will Greenberg
 
@@ -10,22 +10,24 @@
 * CSS
 * Javascript
 * jQuery
+* Bootstrap
+* Popper.js
+* Webpack
+* ESLint
+* Babel
 
 ## Description
 
-This site allows users to _blah blah blah fill this in_ :grin:
-
-## Link to site
-
-This site is accessible [here](/).
+This site allows users to exchange from USD to other currencies.
 
 ## Setup/Installation Requirements
 
 * Clone this repository to your desktop.
-* Navigate to the top level of the directory.
-* Open _blah blah blah fill this_ in your browser.
+* Navigate to currency_exchanger in your terminal.
 * To install the necessary dependencies, run `$ npm install` and `$ npm run build`.
-* Once application is open, run `$ npm test`.
+* Obtain a free API key by creating an account on [this site](https://www.exchangerate-api.com/).
+* Once obtained, place your key in a `.env` file in the top level of this directory, saved as API-KEY. (e.g. `API_KEY=your-key-here`).
+* Run `$ npm run start` to see the site in your browser.
 
 ## Known Bugs
 
