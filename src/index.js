@@ -19,4 +19,8 @@ $(document).ready(function(){
     $('#userInput').hide();
     $('#output').show();
   });
+  $('#again').on("click", function(){
+    $('#userInput').show();
+    $('#output').hide();
+  });
 });
