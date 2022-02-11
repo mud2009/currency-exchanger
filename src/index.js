@@ -10,7 +10,8 @@ function clearForms() {
 }
 
 $(document).ready(function(){
-  $('#exchange').on("click", function(){
+  $('form').submit(function(event){
+    event.preventDefault();
     let dollars = $("#dollars").val();
     let currency = $("#currency").val();
     clearForms();
