@@ -29,6 +29,10 @@ input{
   padding-top: 1em;
 }
 
+#exchange-out {
+  font-size: 1.5em;
+}
+
 #output{
   padding-top: 1em;
   display: none;
