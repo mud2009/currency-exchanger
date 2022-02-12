@@ -18,7 +18,7 @@
 
 ## Description
 
-This site allows users to exchange from USD to other currencies.
+This site allows users to exchange monetary amounts between 9 global currencies.
 
 ## Setup/Installation Requirements
 
