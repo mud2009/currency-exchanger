@@ -1,14 +1,23 @@
 body{
+  background-image: url('../assets/images/dollar.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   background-color: #e9ecef;
   font-family: serif;
 }
 
 .jumbotron{
+  background:transparent;
   padding-top: 15%;
 }
 
 .container {
   text-align: center;
+}
+
+.display-4 {
+  text-shadow: 2px 2px grey;
 }
 
 input{
