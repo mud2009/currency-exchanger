@@ -10,9 +10,10 @@ function clearForms() {
   $("#currency2").val("");
 }
 
-function getElements(response, dollars, currency2) {
+function getElements(response, dollars, currency1, currency2) {
   if (response.result) {
     let outCalc = Math.floor((dollars * response.conversion_rate)*100)/100;
+    void currency1;
     $('#exchange-out').text("");
     $('#exchange-out').prepend(`${outCalc} ${currency2}`);
   } else {
