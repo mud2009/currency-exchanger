@@ -30,10 +30,16 @@ $('form').on("submit", function(event){
   let dollars = $("#dollars").val();
   let currency1 = $("#currency1").val();
   let currency2 = $("#currency2").val();
-  clearForms();
-  makeApiCall(dollars, currency1, currency2);
-  $('#userInput').hide();
-  $('#output').show();
+  if (isNaN(dollars)) {
+    $('#userInput').hide();
+    $('#output').show();
+    $('#exchange-out').text("Please enter a number!");
+  } else {
+    clearForms();
+    makeApiCall(dollars, currency1, currency2);
+    $('#userInput').hide();
+    $('#output').show();
+  }
 });
 $('#again').on("click", function(){
   $('#exchange-out').text("");
