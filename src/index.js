@@ -31,6 +31,7 @@ $('form').on("submit", function(event){
   let currency1 = $("#currency1").val();
   let currency2 = $("#currency2").val();
   if (isNaN(dollars)) {
+    $("#dollars").val("");
     $('#userInput').hide();
     $('#output').show();
     $('#exchange-out').text("Please enter a number!");
