@@ -6,14 +6,16 @@ body{
   text-align: center;
 }
 
-.lead{
-  padding-top: 1em;
-}
 input{
   line-height: .5em;
   text-align: center;
 }
 
+#userInput{
+  padding-top: 1em;
+}
+
 #output{
+  padding-top: 1em;
   display: none;
 }
