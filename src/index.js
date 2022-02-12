@@ -14,7 +14,6 @@ function getElements(response, dollars, currency1, currency2) {
   if (response.result) {
     let outCalc = Math.floor((dollars * response.conversion_rate)*100)/100;
     void currency1;
-    $('#exchange-out').text("");
     $('#exchange-out').prepend(`${outCalc} ${currency2}`);
   } else {
     $('.showErrors').text(`There was an error: ${response}`);
@@ -37,6 +36,7 @@ $('form').on("submit", function(event){
   $('#output').show();
 });
 $('#again').on("click", function(){
+  $('#exchange-out').text("");
   $('#userInput').show();
   $('#output').hide();
 });
