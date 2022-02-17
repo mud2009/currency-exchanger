@@ -12,7 +12,6 @@ export default class Exchange {
       return response.json();
     }
     catch(error){
-      console.log(error);
       return error.message;
     }
   }
